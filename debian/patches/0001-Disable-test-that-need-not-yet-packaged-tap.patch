@@ -1,0 +1,29 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sat, 25 Sep 2021 12:13:58 +0000
+Subject: Disable test that need not yet packaged tap
+
+tap mock method is not available on debian
+
+forwarded: no
+---
+ test.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/test.js b/test.js
+index 5255d77..bae7069 100644
+--- a/test.js
++++ b/test.js
+@@ -75,6 +75,7 @@ t.equal(util.isBuffer({}), false);
+ t.equal(util.isBuffer(Buffer.alloc(0)), true);
+ t.equal(util.isBuffer(Buffer.from('')), true);
+ 
++/*
+ t.test('require buffer instead of using global', t => {
+   const util = t.mock('./lib/util.js', {
+     buffer: {
+@@ -86,3 +87,4 @@ t.test('require buffer instead of using global', t => {
+   t.equal(util.isBuffer, true, 'loaded from require(), not global')
+   t.end()
+ })
++*/
+\ No newline at end of file

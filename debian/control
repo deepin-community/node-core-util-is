@@ -1,0 +1,24 @@
+Source: node-core-util-is
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Ross Gammon <rossgammon@mail.dk>
+Build-Depends: debhelper-compat (= 13)
+ , node-tap <!nocheck>
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-core-util-is
+Vcs-Git: https://salsa.debian.org/js-team/node-core-util-is.git
+Homepage: https://github.com/isaacs/core-util-is
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-core-util-is
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: util.is* functions introduced in Node v0.12 for older versions
+ node-core-util-is provides the util.is* functions from Node v0.12 core for
+ older Node.js versions.
+ .
+ Node.js is an event-based server-side JavaScript engine.
